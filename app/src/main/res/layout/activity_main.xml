@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/meron"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv1"
+
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/briefcase"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv1"
+        app:layout_constraintEnd_toEndOf="@+id/iv1"
+        app:layout_constraintStart_toStartOf="@+id/iv1"
+
+        app:layout_constraintTop_toTopOf="@+id/iv1"
+
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="FUEL INJECTION PUMP-12365478"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="BACK"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+            <TextView
+                android:id="@+id/upc"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Unit Price:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/v1"
+
+
+                />
+
+            <TextView
+                android:id="@+id/txtrs"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/upc"
+
+                app:layout_constraintTop_toBottomOf="@+id/v1"
+
+
+                />
+
+            <TextView
+                android:id="@+id/txtavb"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:text="AVAILABLE STOCK"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/txtrs"
+
+
+                />
+
+            <GridView
+                android:id="@+id/gridv1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:columnWidth="150dp"
+                android:gravity="center"
+                android:horizontalSpacing="1dp"
+
+                android:numColumns="2"
+
+                android:padding="10dp"
+                android:scrollbarThumbVertical="@android:color/transparent"
+                android:stretchMode="spacingWidthUniform"
+                android:verticalSpacing="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtavb"
+
+                />
+
+            <TextView
+                android:id="@+id/txtqtycap"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Quantity"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridv1"
+
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivminus"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="70dp"
+                android:src="@color/meron"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtqtycap" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="02"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ivplus"
+                app:layout_constraintStart_toEndOf="@+id/ivminus"
+                app:layout_constraintTop_toBottomOf="@+id/txtqtycap" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivplus"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="70dp"
+                android:src="@color/meron"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtqtycap" />
+
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivplus"
+                app:layout_constraintEnd_toEndOf="@+id/ivplus"
+                app:layout_constraintStart_toStartOf="@+id/ivplus"
+                app:layout_constraintTop_toTopOf="@+id/ivplus" />
+
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivminus"
+                app:layout_constraintEnd_toEndOf="@+id/ivminus"
+                app:layout_constraintStart_toStartOf="@+id/ivminus"
+                app:layout_constraintTop_toTopOf="@+id/ivminus" />
+
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivminus" />
+
+            <TextView
+                android:id="@+id/txttotcap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:text="Total Price :"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+
+            <TextView
+                android:id="@+id/txttot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+
+                android:background="@drawable/border"
+                app:layout_constraintStart_toEndOf="@id/txttotcap"
+                app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_style_nep"
+                android:text="ADD"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv3"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@color/meron"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="@id/iv2"
+        app:layout_constraintTop_toTopOf="@id/iv2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/iv3"
+        app:layout_constraintEnd_toEndOf="@id/iv3"
+        app:layout_constraintStart_toStartOf="@id/iv3"
+        app:layout_constraintTop_toTopOf="@id/iv3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
